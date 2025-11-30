@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 // Import Swiper React components

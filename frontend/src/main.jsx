@@ -1,11 +1,12 @@
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import {createRoot} from 'react-dom/client'
 import './index.css'
 import HeadNav from './HeadNav'
 import FootNav from './FootNav'
 import Navbar from './Navbar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Footer from './Footer'
-// import HomePage from './landingPage/home/HomePage'
+import HomePage from './landingPage/home/HomePage'
 import VerticalBtn from './VerticalBtn'
 import AdmissionForm from './AdmissionForm'
 import KiaBot from './ChatBot/KiaBot'
@@ -23,7 +24,7 @@ createRoot(document.getElementById('root')).render(
     <Navbar />
     <KiaBot/>
     <Routes>
-      {/* <Route path='/' element={<HomePage/>}/> */}
+      <Route path='/' element={<HomePage/>}/>
       <Route path='/aboutDev' element={<AboutDev/>}/>
       <Route path='/aboutFS' element={<AboutFS/>}/>
       <Route path='/campus' element={<CampusFacility/>}/>

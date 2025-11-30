@@ -28,7 +28,7 @@ function Combo() {
                     btnText='Read More'
                     hrefLink='/'/>
                 <RightComp
-                    imgSrc='\media\assets\IMGL9758-768x512.jpg'
+                    imgSrc='\media\assets\IMGL9732-768x512.jpg'
                     RightTitle='Cafeteria'
                     Desc='Our well-designed and facilitated cafeteria, situated on campus, serves as a hub of activity where students come together to relax, recharge, and experience the changing seasons in its serene atmosphere.'
                     btnText='Read More'

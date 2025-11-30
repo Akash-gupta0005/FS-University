@@ -2,7 +2,7 @@ import React from 'react'
 import ScrollAnimate from './ScrollAnimate';
 import './effect.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import './landingPage/home/InfoTab/Info.css'
+import './landingPage/home/InfoTab/Info.css';
 
 // Import Swiper styles
 import 'swiper/css';
