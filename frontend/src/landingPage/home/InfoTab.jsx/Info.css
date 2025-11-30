@@ -1,0 +1,19 @@
+#counter{
+    color:#9d2235;
+    font-size: 4rem;
+    font-weight: 600;
+}
+#box{
+    width: 300px;
+    scale: 0.9;
+    transition: all 0.5s ease;
+}
+#box:hover{
+    box-shadow: 0 0 18px 5px rgba(173, 5, 5, 0.712);
+    scale: 1;
+}
+@media (max-width:395px) {
+    #InfoBox{
+        display: block;
+    } 
+}
