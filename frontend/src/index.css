@@ -13,9 +13,9 @@
     flex-shrink: 0;
 }
 /* Head and Foot Nav Response */
-@media (max-width:380px){
+@media (max-width:540px){
     #footNav a{
-        font-size: 10px;
+        font-size: 14px;
     }
     #footNav i{
         font-size: 12px;
@@ -24,9 +24,9 @@
         text-align: center;
     }
 }
-@media (max-width:200px) {
+@media (max-width:350px) {
     #footNav a{
-        font-size: 8px;
+        font-size: 10px;
     }
     #footNav i{
         font-size: 10px;
