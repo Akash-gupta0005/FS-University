@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import ScrollAnimate from './ScrollAnimate';
 import './effect.css';
+ import { ToastContainer, toast } from 'react-toastify';  
+ import 'react-toastify/dist/ReactToastify.css'
+
 // import Discover from './Discover';
  
 function AdmissionForm() {
@@ -21,27 +24,40 @@ function AdmissionForm() {
     }));
   };
 
-  const sendEmail = async (e) => {
+  const sendUserData = async(e) => {
     e.preventDefault();
-    try {
-      const res = await fetch("http://localhost:8006/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
+    const {studentName,cityName,programName,programCategory,email,phone}=formData;
+    if (studentName=="") {
+      toast.error("Student name is required");
+    }else if (cityName == "") {
+      toast.error("City name is required");
+    }else if (programName == "") {
+      toast.error("City name is required");
+    }else if (programCategory == "") {
+      toast.error("City name is required");
+    }else if (email == "") {
+      toast.error("email is required");
+    }else if (!email.includes("@")) {
+      toast.error("invalid email");
+    }else if (phone == "") {
+      toast.error("mobile number is required");
+    }else{
+      const res=await fetch("http://localhost:3002/register",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
         },
-        body: JSON.stringify(formData)
+        body:JSON.stringify(formData)
       });
-      const data = await res.json();
+      const data=await res.json();
       if (res.ok) {
-        alert("Application submitted successfully! Check your email.");
+        toast.success("Application submitted successfully! Check your email.");
         setFormData({ studentName: "", cityName: "", programCategory: "", programName: "", phone: "", email: "" });
       } else {
-        alert(data.message || "Error submitting application");
+        toast.error(data.message || "Error submitting application");
       }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Failed to submit application");
     }
+    
   }
     return (
         <ScrollAnimate>
@@ -135,8 +151,9 @@ function AdmissionForm() {
                                   />
                                 </div>
                               </div>
-                              <button type="submit" onClick={sendEmail} className="btn btn-light fw-semibold p-2" style={{ marginLeft: '40%' }} >Register</button>
+                              <button type="submit" onClick={sendUserData} className="btn btn-light fw-semibold p-2" style={{ marginLeft: '40%' }} >Register</button>
                             </form>
+                            <ToastContainer/>
                         </div>
                     </div>
                 </div>

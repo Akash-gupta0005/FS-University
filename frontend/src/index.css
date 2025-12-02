@@ -15,10 +15,10 @@
 /* Head and Foot Nav Response */
 @media (max-width:380px){
     #footNav a{
-        font-size: 10px;
+        font-size: 8px;
     }
     #footNav i{
-        font-size: 12px;
+        font-size: 10px;
     }
     .footer_Nav{
         text-align: center;
