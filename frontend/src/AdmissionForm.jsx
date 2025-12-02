@@ -42,7 +42,7 @@ function AdmissionForm() {
     }else if (phone == "") {
       toast.error("mobile number is required");
     }else{
-      const res=await fetch("http://localhost:3002/register",{
+      const res=await fetch("https://fs-university.vercel.app/register",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
