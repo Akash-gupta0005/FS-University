@@ -12,6 +12,11 @@ const userSchema = mongoose.Schema(({
         required: true,
         trim: true
     },
+    programCategory:{
+        type:String,
+        required:true,
+        trim:true
+    },
     cityName: {
         type: String,
         required: true,
@@ -26,10 +31,9 @@ const userSchema = mongoose.Schema(({
                 throw new Error('invalid email');
             }
         },
-        phone: {
+    phone: {
             type: Number,
             required: true,
-            unique: true
         },
         message:[]
     }

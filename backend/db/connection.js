@@ -1,6 +1,9 @@
 const mongoose=require('mongoose');
-const DB=process.env.DATABASE;
 
-mongoose.connect(DB,{
-    
-}).then(()=>console.log("DATABASE CONNECTED")).catch((err)=>console.log(err));
+const uri=process.env.MONGO_URI;
+
+mongoose.connect(uri).then(()=>{
+  console.log('database connected');
+}).catch((err)=>{
+  console.log(err);
+})
